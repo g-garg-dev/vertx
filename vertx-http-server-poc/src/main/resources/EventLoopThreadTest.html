@@ -1,0 +1,41 @@
+<html>
+<head>
+
+</head>
+
+<body>
+<script>
+
+
+var count;
+
+            for(count = 0; count < 10; count++) {
+               sendRequest();
+            }
+
+function sendRequest(){
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "http://localhost:8091/poc",true);
+xhr.send();
+xhr.onload = function() {
+  let responseObj = xhr.response;
+  document.write(responseObj+"<br />");
+};
+
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 3) {
+    // loading
+  }
+  if (xhr.readyState == 4) {
+    //alert("done");
+  }
+};
+
+}
+
+
+
+
+</script>
+</body>
+</html>

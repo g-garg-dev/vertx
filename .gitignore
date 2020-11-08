@@ -1,0 +1,11 @@
+*target
+*.idea
+.DS_Store
+.settings
+.project
+.classpath
+*.iml
+.gradle
+node_modules
+/.metadata/
+/.recommenders/
